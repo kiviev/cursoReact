@@ -1,7 +1,12 @@
 div{
- width: 150px;
- height: 30px;
+ height: auto;
  text-align: center;
+}
+.reloj{
+	display: block;
+	float: left;
+	padding: 10px;
+	width: 150px;
 }
 p{
  margin: 0px;
@@ -11,4 +16,21 @@ p{
 }
 .hora{
  background-color: #90C3D4;
+}
+.ocultar{
+	display: none;
+}
+.mostrar{
+	display: block;
+}
+.red{
+	background: red;
+}
+
+.yellow{
+	background: yellow;
+}
+
+.green{
+	background: green;
 }
