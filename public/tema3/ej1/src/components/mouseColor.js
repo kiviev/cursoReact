@@ -22,7 +22,7 @@ randomInt(max = 255){
 randomColour(){
 	let col = {
 		red :  this.randomInt(),
-		green : this.randomInt() ,
+		green : this.randomInt(),
 		blue : this.randomInt()
 	};
 	this.setState({color : col});

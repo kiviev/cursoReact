@@ -48,7 +48,7 @@ class FechaHora extends Component{
 	}
 
 	media(){
-		return (this.state.date.getMinutes() === 30);
+		return (this.state.date.getMinutes() === 34);
 	}
 	cuartos(){
 		return (this.state.date.getMinutes() === 15 || this.state.date.getMinutes() === 45);
