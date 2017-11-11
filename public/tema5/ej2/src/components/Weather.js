@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import {FormWeather} from './index';
+import {FormWeather } from './index';
 
-import {Request} from 'react-http-request';
 class Weather extends Component {
+	constructor(props){
+		super(props);
+		this.state ={
+			city :'mostoles'
+		}
+	}
   render() {
     return (
-		<div>
-			<div className='col-md-5'>
+		<div className='row'>
+			<div className="col-md-12">
 				<FormWeather />
 			</div>
-
-			Estoy en weather
+			
 		</div>
     );
   }

@@ -5,11 +5,16 @@ import './App.css';
 import {Weather} from './components/index';
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+  }
+
   render() {
     return (
       <div className="App container">
       <div className="jumbotron padded">
-          <div className='row'>
+          <div className='container'>
             <Weather />
           </div>
       </div>
