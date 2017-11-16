@@ -2,7 +2,7 @@
 
 const CONFIG = {
 	apiWeather : {
-		url : 'http://api.openweathermap.org',
+		url : 'https://api.openweathermap.org',
 		data : '/data',
 		version : '/2.5',
 		type : '/weather',

@@ -8,25 +8,22 @@ class FormWeather extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			city : '',
-			send : false
+			city : 'madrid',
+			send : true
 		}
 
 	}
 
-
-
-
 handleSubmit(ev){
 	ev.preventDefault();
-	this.setState({send:false});
 }
 
 handleSend(){
 	console.log('enviando...');
-	if(this.state.city !== '') {
-		this.setState({send:true});
-	}
+	let cityValue = document.getElementById('city').value;
+		this.setState({
+			city : cityValue
+		});
 }
 
 manejarEventoTeclado(ev){
@@ -45,10 +42,6 @@ handelReturn(ev){
 		});
 	}
 }
-renderApi(){
-	console.log(this.state.send);
-	if(this.state.send) return <ApiOpenweathermap city={this.state.city} />;
-}
   render() {
     return (
     	<div>
@@ -58,13 +51,16 @@ renderApi(){
 						<div className="row">
 							<div className="col-md-12">
 								<div className="form-group">
-								    <label >Tu ciudad</label>
+								    <label >El tiempo en tu ciudad</label>
 								    <input type="text" className="form-control" 
-								    	onKeyPress={this.manejarEventoTeclado.bind(this)} 
-								    	onKeyDown={this.handelReturn.bind(this)} value={this.state.city} id="city" placeholder="Escribe aquí tu ciudad" />
+								    	id="city" 
+								    	// onKeyPress={this.manejarEventoTeclado.bind(this)} 
+								    	// onKeyDown={this.handelReturn.bind(this)} 
+								    	// value={this.state.city} id="city" 
+								    	placeholder="Escribe aquí tu ciudad" />
 								</div>
 								<div className="col-md-12">
-									<button type="button" onClick={this.handleSend.bind(this)}   className="btn btn-primary btn-block">Enviar</button>
+									<button type="button" onClick={this.handleSend.bind(this)} className="btn btn-primary btn-block">Enviar</button>
 								</div>
 							</div>
 						</div>
@@ -73,8 +69,7 @@ renderApi(){
 			</form>
 			<div className="col-md-12">
 
-
-				{this.renderApi()}
+<ApiOpenweathermap city={this.state.city} />
 
 			</div>
 		</div>
