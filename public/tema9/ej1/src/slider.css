@@ -1,0 +1,14 @@
+.slider{
+ margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
+  background: #419be0;
+}
+.slide img{
+	width: 100%;
+   	height: auto;
+}
+.slide{
+	max-height: 800px;
+}
