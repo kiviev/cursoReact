@@ -68,6 +68,9 @@ class App extends Component {
         </div>
         <div className="slider">
           <Slider  {...settings}>
+              <div className="slide">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/4qoXKqxSeHc" frameborder="0" allowfullscreen></iframe>
+              </div>
             {
               this.images.map((image) => {
                   return ( <div className="slide"><img src={image.src} alt={image.alt}></img></div>)

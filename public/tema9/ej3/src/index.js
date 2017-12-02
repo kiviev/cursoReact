@@ -4,5 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import VideoComponent from './components/video';
+
+ReactDOM.render(<VideoComponent />, document.getElementById('root'));
 registerServiceWorker();
