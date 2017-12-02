@@ -4,5 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Calculadora from './components/Calculadora'
+
+ReactDOM.render(<Calculadora />, document.getElementById('root'));
 registerServiceWorker();
